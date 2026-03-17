@@ -4,15 +4,23 @@ cmake_minimum_required(VERSION 3.18.1)
 #------------------- BEGIN Library (Menu)  ------------------------#
 project("Menu")
 add_library(
-
         # Sets the name of the library ---> libMenu.so
         Menu
         SHARED
 
-        # Menu
+        # Menu Utama
         Menu/Menu.cpp
 
-        # ImGui
+        # --- TAMBAHAN DARI KENZ (WAJIB ADA AGAR RESOLVE JALAN) ---
+        Menu/Il2Cpp.cpp      # Tambahan Kenz
+        Menu/Il2Cpp.h        # Tambahan Kenz
+        Menu/Tools.cpp       # Tambahan Kenz
+        Menu/Tools.h         # Tambahan Kenz
+        Menu/fake_dlfcn.cpp  # Tambahan Kenz
+        Menu/fake_dlfcn.h    # Tambahan Kenz
+        Menu/Includes.h      # Tambahan Kenz
+
+        # ImGui Core
         Menu/ImGui/imconfig.h
         Menu/ImGui/imgui.cpp
         Menu/ImGui/imgui.h
@@ -24,6 +32,7 @@ add_library(
         Menu/ImGui/imstb_textedit.h
         Menu/ImGui/imstb_truetype.h
 
+        # ImGui Backends (Sudah ada Vulkan, mantap!)
         Menu/ImGui/backends/imgui_impl_android.cpp
         Menu/ImGui/backends/imgui_impl_android.h
         Menu/ImGui/backends/imgui_impl_opengl3.cpp
