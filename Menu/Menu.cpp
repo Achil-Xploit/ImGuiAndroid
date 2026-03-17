@@ -12,6 +12,10 @@
 #include "ImGui/imgui.h"
 #include "ImGui/backends/imgui_impl_android.h"
 #include "ImGui/backends/imgui_impl_vulkan.h"
+#include "Menu.h"
+#include "Includes.h"
+#include "Tools.h"
+#include "Il2Cpp.h"
 
 #include "../Dobby/dobby.h"
 
